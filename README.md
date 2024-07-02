@@ -1,6 +1,6 @@
 # Sri Lanka Cadet Corps Battalion Management System
 
-- This is a simple web application that is developed to manage the battalion of the Sri Lanka Cadet Corps. 
+- This is a simple standalone application that is developed to manage the battalion of the Sri Lanka Cadet Corps. 
 - This application is developed using Java,JavaFx and MySQL.
 - Application includes features to manage cadets, officers, platoons, schools, companies, battalions, camps, zones, settings and reports.
 
