@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="MainBackPane" prefHeight="689.0" prefWidth="1156.0" stylesheets="@assets/style/otherPaneFormStyle.css" AnchorPane.rightAnchor="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.zonePanelFormController">
+   <children>
+      <ImageView fitHeight="67.0" fitWidth="1156.0" layoutX="17.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <image>
+            <Image url="@assets/img/titleBack.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="0.15" />
+         </effect>
+      </ImageView>
+      <Label id="paneTitleText" layoutX="75.0" layoutY="14.0" prefHeight="49.0" prefWidth="545.0" text="ZONE MANAGEMENT" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="14.0" />
+      <ScrollPane id="mainScrollPane" fx:id="ScrollPane" focusTraversable="true" maxHeight="-Infinity" prefHeight="889.0" prefWidth="1156.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0">
+         <content>
+            <AnchorPane fx:id="workingPane" maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" onMouseClicked="#workingPaneOnClicked" prefHeight="890.0" prefWidth="1138.0" style="-fx-background-size: 1138 890;" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton id="btnAddCadet" focusTraversable="false" layoutX="27.0" layoutY="17.0" onMouseClicked="#btnAddZoneOnClicked" prefHeight="48.0" prefWidth="172.0" text="Add a Zone">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/Add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton id="btnReport" focusTraversable="false" layoutX="720.0" layoutY="16.0" prefHeight="48.0" prefWidth="221.0" text="Print All Zone Report" AnchorPane.leftAnchor="720.0" AnchorPane.rightAnchor="197.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/Print.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton id="btnReport" focusTraversable="false" layoutX="931.0" layoutY="16.0" prefHeight="48.0" prefWidth="166.0" text="Save as PDF" AnchorPane.rightAnchor="25.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/PDF.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <AnchorPane fx:id="zone1Pane" layoutX="26.0" layoutY="88.0" prefHeight="528.0" prefWidth="300.0" styleClass="OptionBack">
+                     <children>
+                        <Label layoutX="9.0" layoutY="8.0" style="-fx-font-size: 16;" text="Zone Code : " />
+                        <Label fx:id="zone1Code" layoutX="106.0" layoutY="8.0" style="-fx-font-size: 16;" text="Z-000" />
+                        <Label fx:id="zone1Name" layoutX="7.0" layoutY="32.0" style="-fx-font-size: 32;" text="Madagama" />
+                        <Label layoutX="9.0" layoutY="95.0" style="-fx-font-size: 16;" text="Total School : " />
+                        <Label fx:id="zone1TtlScl" layoutX="117.0" layoutY="95.0" style="-fx-font-size: 16;" text="00" />
+                        <Label layoutX="9.0" layoutY="124.0" style="-fx-font-size: 16;" text="Total Cadet School : " />
+                        <Label fx:id="zone1CdtScl" layoutX="168.0" layoutY="124.0" style="-fx-font-size: 16;" text="00" />
+                        <Label layoutX="8.0" layoutY="155.0" style="-fx-font-size: 16;" text="Total non Cadet School : " />
+                        <Label fx:id="zone1NonCdtScl" layoutX="197.0" layoutY="155.0" style="-fx-font-size: 16;" text="00" />
+                        <Label layoutX="9.0" layoutY="185.0" style="-fx-font-size: 16;" text="Total Cadets : " />
+                        <Label fx:id="zone1TtlCadet" layoutX="121.0" layoutY="186.0" style="-fx-font-size: 16;" text="00" />
+                        <JFXButton id="btnViewAndRemove" focusTraversable="false" layoutX="8.0" layoutY="488.0" onMouseClicked="#zoneAllSclDetailOnClicked" prefHeight="31.0" prefWidth="286.0" text="View All Cadet School in this Zone">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="263.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/menuVertical.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <MenuButton layoutX="258.0" layoutY="7.0" mnemonicParsing="false" opacity="0.0" prefHeight="26.0" prefWidth="18.0">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#zoneEditOnClicked" text="Edit Details">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/img/Edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                            <MenuItem mnemonicParsing="false" onAction="#zoneRemoveOnClicked" text="Remove">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/img/Remove.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                          </items>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MenuButton>
+                        <PieChart fx:id="pieChart1" layoutX="32.0" layoutY="222.0" prefHeight="254.0" prefWidth="237.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="zone2Pane" layoutX="421.0" layoutY="88.0" prefHeight="528.0" prefWidth="300.0" styleClass="OptionBack">
+                     <children>
+                        <Label layoutX="9.0" layoutY="8.0" style="-fx-font-size: 16;" text="Zone Code : " />
+                        <Label fx:id="zone2Code" layoutX="106.0" layoutY="8.0" style="-fx-font-size: 16;" text="Z-000" />
+                        <Label fx:id="zone2Name" layoutX="7.0" layoutY="32.0" style="-fx-font-size: 32;" text="Buttala" />
+                        <Label layoutX="9.0" layoutY="95.0" style="-fx-font-size: 16;" text="Total School : " />
+                        <Label fx:id="zone2TtlScl" layoutX="117.0" layoutY="95.0" style="-fx-font-size: 16;" text="00" />
+                        <Label layoutX="9.0" layoutY="124.0" style="-fx-font-size: 16;" text="Total Cadet School : " />
+                        <Label fx:id="zone2CdtScl" layoutX="168.0" layoutY="124.0" style="-fx-font-size: 16;" text="00" />
+                        <Label layoutX="8.0" layoutY="155.0" style="-fx-font-size: 16;" text="Total non Cadet School : " />
+                        <Label fx:id="zone2NonCdtScl" layoutX="197.0" layoutY="155.0" style="-fx-font-size: 16;" text="00" />
+                        <Label layoutX="9.0" layoutY="185.0" style="-fx-font-size: 16;" text="Total Cadets : " />
+                        <Label fx:id="zone2TtlCadet" layoutX="121.0" layoutY="186.0" style="-fx-font-size: 16;" text="00" />
+                        <JFXButton id="btnViewAndRemove" focusTraversable="false" layoutX="9.0" layoutY="489.0" onMouseClicked="#zoneAllSclDetailOnClicked" prefHeight="31.0" prefWidth="283.0" text="View All Cadet School in this Zone">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="267.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/menuVertical.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <MenuButton layoutX="262.0" layoutY="5.0" mnemonicParsing="false" opacity="0.0" prefHeight="26.0" prefWidth="18.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#zoneEditOnClicked" text="Edit Details">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/img/Edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#zoneRemoveOnClicked" text="Remove">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/img/Remove.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                           </items>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MenuButton>
+                        <PieChart fx:id="pieChart2" layoutX="36.0" layoutY="222.0" prefHeight="254.0" prefWidth="237.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="zone3Pane" layoutX="814.0" layoutY="88.0" prefHeight="528.0" prefWidth="300.0" styleClass="OptionBack">
+                     <children>
+                        <Label layoutX="9.0" layoutY="8.0" style="-fx-font-size: 16;" text="Zone Code : " />
+                        <Label fx:id="zone3Code" layoutX="106.0" layoutY="8.0" style="-fx-font-size: 16;" text="Z-000" />
+                        <Label fx:id="zone3Name" layoutX="7.0" layoutY="32.0" style="-fx-font-size: 32;" text="Wallawaya" />
+                        <Label layoutX="9.0" layoutY="95.0" style="-fx-font-size: 16;" text="Total School : " />
+                        <Label fx:id="zone3TtlScl" layoutX="117.0" layoutY="95.0" style="-fx-font-size: 16;" text="00" />
+                        <Label layoutX="9.0" layoutY="124.0" style="-fx-font-size: 16;" text="Total Cadet School : " />
+                        <Label fx:id="zone3CdtScl" layoutX="168.0" layoutY="124.0" style="-fx-font-size: 16;" text="00" />
+                        <Label layoutX="8.0" layoutY="155.0" style="-fx-font-size: 16;" text="Total non Cadet School : " />
+                        <Label fx:id="zone3NonCdtScl" layoutX="197.0" layoutY="155.0" style="-fx-font-size: 16;" text="00" />
+                        <Label layoutX="9.0" layoutY="185.0" style="-fx-font-size: 16;" text="Total Cadets : " />
+                        <Label fx:id="zone3TtlCadet" layoutX="121.0" layoutY="186.0" style="-fx-font-size: 16;" text="00" />
+                        <JFXButton id="btnViewAndRemove" focusTraversable="false" layoutX="9.0" layoutY="489.0" onMouseClicked="#zoneAllSclDetailOnClicked" prefHeight="31.0" prefWidth="283.0" text="View All Cadet School in this Zone">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="266.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/menuVertical.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <MenuButton layoutX="261.0" layoutY="5.0" mnemonicParsing="false" opacity="0.0" prefHeight="26.0" prefWidth="18.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#zoneEditOnClicked" text="Edit Details">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/img/Edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#zoneRemoveOnClicked" text="Remove">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/img/Remove.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                           </items>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MenuButton>
+                        <PieChart fx:id="pieChart3" layoutX="36.0" layoutY="225.0" prefHeight="254.0" prefWidth="237.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="zoneSchoolPane" layoutX="60.0" layoutY="300.0" prefHeight="556.0" prefWidth="1009.0" style="-fx-background-color: #EEEEEE; -fx-border-color: black; -fx-border-width: 0.5;" visible="false" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="69.0">
+                     <children>
+                        <TableView fx:id="tblZoneSchool" focusTraversable="false" layoutX="24.0" layoutY="56.0" prefHeight="472.0" prefWidth="959.0" stylesheets="@assets/style/tableViewStyle.css">
+                           <columns>
+                              <TableColumn prefWidth="92.00003051757812" text="School Code" />
+                              <TableColumn prefWidth="351.0" text="Name" />
+                              <TableColumn prefWidth="396.0" text="Address" />
+                              <TableColumn prefWidth="119.0" text="No Of Platoon" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="347.0" layoutY="20.0" style="-fx-font-size: 18;" text="All Cadet School Zone Of " />
+                        <Label fx:id="selectedZoneName" layoutX="566.0" layoutY="20.0" style="-fx-font-size: 18;" text="Madagama" />
+                     </children>
+                     <effect>
+                        <DropShadow color="#6f6f6f" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="addOrEditPane" layoutX="361.0" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="410.0" style="-fx-border-color: black; -fx-background-color: #F4F4F4;" stylesheets="@assets/style/otherPaneFormStyle.css" visible="false">
+                     <children>
+                        <AnchorPane layoutY="48.0" prefHeight="376.0" prefWidth="410.0">
+                           <children>
+                              <Pane layoutX="39.0" layoutY="65.0" prefHeight="63.0" prefWidth="344.0" styleClass="detailOptionBack">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Zone Code">
+                                       <padding>
+                                          <Insets left="4.0" right="4.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="txtZoneCode" focusTraversable="false" layoutX="12.0" layoutY="13.0" onKeyReleased="#addTxtFieldOnKeyReleased" prefHeight="41.0" prefWidth="324.0" styleClass="detailTxtField" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="39.0" layoutY="150.0" prefHeight="63.0" prefWidth="346.0" styleClass="detailOptionBack">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Zone Name">
+                                       <padding>
+                                          <Insets left="4.0" right="4.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="txtZoneName" focusTraversable="false" layoutX="12.0" layoutY="13.0" onKeyReleased="#addTxtFieldOnKeyReleased" prefHeight="41.0" prefWidth="325.0" styleClass="detailTxtField" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="39.0" layoutY="236.0" prefHeight="63.0" prefWidth="346.0" styleClass="detailOptionBack">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Total Number of School">
+                                       <padding>
+                                          <Insets left="4.0" right="4.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="txtTotalScl" focusTraversable="false" layoutX="12.0" layoutY="13.0" onKeyReleased="#addTxtFieldOnKeyReleased" prefHeight="41.0" prefWidth="325.0" styleClass="detailTxtField" />
+                                 </children>
+                              </Pane>
+                              <JFXButton id="addAchievement" fx:id="btnAddOrEdit" layoutX="272.0" layoutY="315.0" onMouseClicked="#btnAddOrEditOnClicked" prefHeight="44.0" prefWidth="113.0" style="-fx-font-size: 15;" text="Add" />
+                              <Pane fx:id="addOrEditNotificationPane" layoutX="8.0" layoutY="8.0" prefHeight="29.0" prefWidth="393.0" style="-fx-background-color: #FF8880;">
+                                 <children>
+                                    <Label fx:id="lblAddOrEditNotification" layoutX="28.0" layoutY="5.0" style="-fx-text-fill: white; -fx-font-size: 15;" text="Wrong School Code..!" />
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/img/Error.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="1.0" layoutY="1.0" onMouseDragged="#closePaneOnMouseDragged" onMousePressed="#closePaneOnMousePressed" prefHeight="48.0" prefWidth="408.0" style="-fx-background-color: #bebec1;">
+                           <children>
+                              <Label fx:id="lblTitleTxt" layoutX="38.0" layoutY="13.0" style="-fx-font-size: 21;" text="ADD ZONE" />
+                              <ImageView id="closeMiniIcon" fitHeight="25.0" fitWidth="25.0" layoutX="376.0" layoutY="13.0" onMouseClicked="#closeOnClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/img/Close.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="MOVE" />
+                           </cursor>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

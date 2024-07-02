@@ -1,0 +1,114 @@
+* {
+    -fx-font-family: Inter;
+}
+#dashboardBackPane{
+    -fx-background-image: url("dashboardPaneBack.jpg");
+    -fx-background-size:1156 689;
+}
+#timeBack{
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 5, 0.0 , 0 , 1 );
+}
+#lblDate{
+    -fx-font-size: 19;
+    -fx-text-fill: white;
+    -fx-font-family:Calibri;
+    -fx-effect: innershadow( gaussian, #212b3d, 10, 3, 5, 5 );
+}
+#lblTime{
+    -fx-font-size: 60;
+    -fx-text-fill: white;
+    -fx-font-family: Calibri;
+    -fx-effect: innershadow( gaussian, #212b3d, 10, 3, 5, 5 );
+}
+
+#visionMissionPane{
+    -fx-background-color:#212b3d;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 5, 0.2 , 0 , 2 );
+    -fx-background-radius: 0 0 14 14;
+}
+#visionMissionTxt{
+    -fx-text-fill: #FEE715FF;
+    -fx-background-color:transparent;
+    -fx-background-radius: 5 ;
+    -fx-font-size: 17;
+}
+#missionVisionTxtArea{
+    -fx-border-color: transparent;
+    -fx-border-width: 0.5;
+    -fx-text-fill: white;
+    -fx-font-size: 14.5;
+    -fx-alignment: center;
+}
+#missionVisionTxtArea *.text {
+    -fx-text-alignment:center;
+}
+
+#missionVisionPaneBack{
+    -fx-background-color: linear-gradient(to top, #b0b0b0 0%, rgba(255, 255, 255, 0.1) 118%);
+    -fx-background-radius: 0 0 12 12;
+}
+#totalPaneBack{
+    -fx-background-radius: 14 14 0 0;
+    -fx-background-color:rgba(43, 63, 85, 0.19);
+}
+#specialNotePane{
+    -fx-background-radius: 14;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 5, 0.0 , 0 , 1 );
+    -fx-background-color:rgba(43, 63, 85, 0.19);
+}
+#specialNote{
+    -fx-font-size: 19;
+    -fx-effect: innershadow( gaussian, #FEE715FF, 10, 3, 5, 5 );
+
+}
+#specialNoteTextArea{
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-text-fill: #101820FF;
+    -fx-font-size: 18;
+    -fx-alignment: center;
+    -fx-prompt-text-fill: rgba(35, 34, 34, 0.56);
+}
+#specialNoteTextArea *.text{
+    -fx-text-alignment: center;
+}
+#aboutNcc{
+    -fx-font-size: 25;
+    -fx-text-fill:#c9fde2;
+}
+#aboutNccPane{
+    -fx-background-radius: 14;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 5, 0.0 , 0 , 1 );
+    -fx-background-color: rgba(25, 36, 49, 0.61);
+}
+#aboutBattalion{
+    -fx-font-size: 25;
+    -fx-text-fill: #c9fde2;
+}
+#aboutBattalionPane{
+    -fx-background-radius: 14;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 5, 0.0 , 0 , 1 );
+    -fx-background-color: rgba(25, 36, 49, 0.61);
+}
+#aboutBattalionPane:hover,#aboutNccPane:hover{
+    -fx-background-color: rgba(25, 36, 49, 0.94);
+}
+.chart-legend{
+    -fx-background-color: rgba(220, 220, 220, 0.41);
+}
+#lblTotalCadets,#lblTotalOfficers,#lblTotalPlatoons{
+    -fx-font-size: 60;
+    -fx-font-weight: bold;
+    -fx-effect: innershadow( gaussian, #212b3d, 10, 3, 5, 5 );
+}
+#totalText{
+    -fx-font-size: 18;
+}
+#logOutPane{
+    -fx-background-radius: 14;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 5, 0.0 , 0 , 1 );
+    -fx-background-color: #e86d61;
+}
+#logOutPane:hover{
+    -fx-background-color: rgb(255, 51, 51);
+}

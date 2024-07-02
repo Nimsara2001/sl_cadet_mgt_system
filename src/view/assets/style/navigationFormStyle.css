@@ -1,0 +1,42 @@
+*{
+    -fx-font-family: Inter;
+}
+#vBox{
+    -fx-background-image: url("vBoxBack.jpg");
+    -fx-background-size: 210 689;
+}
+.navigateBtn{
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-border-color:#101820FF;
+    -fx-border-width: 0 0.5 0.5 0;
+}
+.navigateBtn:hover,.navigateBtn:selected,.navigateBtn:focused{
+    -fx-background-color: #101820FF;
+    -fx-text-fill:#FEE715FF ;
+    -fx-font-size: 16;
+}
+#titleBar{
+    -fx-background-color: #A5A5A8;
+}
+#helpCloseBtn{
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-text-fill:#808080;
+    -fx-font-size: 15;
+    -fx-border-color:#101820FF;
+    -fx-border-width: 0.5 0 0 0;
+}
+#helpCloseBtn:hover,#helpCloseBtn:focused,#helpCloseBtn:selected{
+    -fx-background-color: #101820FF;
+    -fx-text-fill:#FEE715FF ;
+    -fx-font-size: 16;
+}
+#closeMiniIcon:hover{
+    -fx-effect:  dropshadow( three-pass-box , rgba(122, 122, 122, 0.6), 5, 0.3, 2 , 2 );
+    -fx-opacity: 1;
+}
+
+

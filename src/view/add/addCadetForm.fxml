@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="920.0" prefWidth="1103.0" styleClass="OptionBack" stylesheets="@../assets/style/otherPaneFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.add.addCadetFormController">
+   <children>
+      <Pane layoutX="29.0" layoutY="81.0" prefHeight="63.0" prefWidth="324.0" styleClass="detailOptionBack" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Regiment Number">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <TextField layoutX="12.0" layoutY="13.0" prefHeight="41.0" prefWidth="300.0" styleClass="detailTxtField" />
+         </children>
+      </Pane>
+      <Pane layoutX="755.0" layoutY="444.0" prefHeight="63.0" prefWidth="324.0" styleClass="detailOptionBack" AnchorPane.topAnchor="444.0">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Rank">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <ComboBox layoutX="12.0" layoutY="11.0" prefHeight="41.0" prefWidth="300.0" styleClass="detailOptionCmb" />
+         </children>
+      </Pane>
+      <Pane layoutX="25.0" layoutY="276.0" prefHeight="63.0" prefWidth="278.0" styleClass="detailOptionBack" AnchorPane.leftAnchor="25.0">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Date Of Birth">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <JFXDatePicker focusTraversable="false" layoutX="14.0" layoutY="12.0" prefHeight="40.0" prefWidth="253.0" styleClass="detailTxtField" />
+         </children>
+      </Pane>
+      <Pane id="imageBack" layoutX="597.0" layoutY="74.0" prefHeight="392.0" prefWidth="322.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <ImageView fitHeight="326.0" fitWidth="293.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/img/sampleCadetImg.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton id="imageEdit" focusTraversable="false" layoutX="48.0" layoutY="349.0" prefHeight="35.0" prefWidth="97.0" text="Change">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/EditImage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton id="imageEdit" focusTraversable="false" layoutX="177.0" layoutY="349.0" prefHeight="35.0" prefWidth="97.0" text="remove">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/img/RemoveImage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="335.0" layoutY="277.0" prefHeight="63.0" prefWidth="373.0" styleClass="detailOptionBack">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="NIC No">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <TextField layoutX="12.0" layoutY="13.0" prefHeight="41.0" prefWidth="350.0" styleClass="detailTxtField" />
+         </children>
+      </Pane>
+      <Pane layoutX="25.0" layoutY="364.0" prefHeight="63.0" prefWidth="277.0" styleClass="detailOptionBack">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Contact No">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <TextField layoutX="12.0" layoutY="12.0" prefHeight="41.0" prefWidth="253.0" styleClass="detailTxtField" />
+         </children>
+      </Pane>
+      <Pane layoutX="334.0" layoutY="364.0" prefHeight="63.0" prefWidth="374.0" styleClass="detailOptionBack">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="E-Mail">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <TextField layoutX="12.0" layoutY="12.0" prefHeight="41.0" prefWidth="350.0" styleClass="detailTxtField" />
+         </children>
+      </Pane>
+      <Pane layoutX="25.0" layoutY="110.0" prefHeight="63.0" prefWidth="684.0" styleClass="detailOptionBack">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Name with Initials">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <TextField layoutX="12.0" layoutY="13.0" prefHeight="41.0" prefWidth="659.0" styleClass="detailTxtField" />
+         </children>
+      </Pane>
+      <Pane layoutX="25.0" layoutY="192.0" prefHeight="63.0" prefWidth="684.0" styleClass="detailOptionBack">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Name In Full">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <TextField layoutX="12.0" layoutY="12.0" prefHeight="41.0" prefWidth="659.0" styleClass="detailTxtField" />
+         </children>
+      </Pane>
+      <Pane layoutX="25.0" layoutY="442.0" prefHeight="63.0" prefWidth="684.0" styleClass="detailOptionBack">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Address">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <TextField layoutX="12.0" layoutY="12.0" prefHeight="41.0" prefWidth="659.0" styleClass="detailTxtField" />
+         </children>
+      </Pane>
+      <Pane layoutX="25.0" layoutY="520.0" prefHeight="63.0" prefWidth="684.0" styleClass="detailOptionBack">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="School">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <TextField layoutX="12.0" layoutY="12.0" prefHeight="41.0" prefWidth="659.0" styleClass="detailTxtField" />
+         </children>
+      </Pane>
+      <TableView focusTraversable="false" layoutX="22.0" layoutY="627.0" prefHeight="201.0" prefWidth="1058.0" stylesheets="@../assets/style/tableViewStyle.css">
+         <columns>
+            <TableColumn prefWidth="908.0000152587891" style="-fx-border-color: #F4D885;" text="Achievement" />
+            <TableColumn prefWidth="150.0" text="Options" />
+         </columns>
+      </TableView>
+      <Pane layoutX="365.0" layoutY="25.0" prefHeight="63.0" prefWidth="343.0" styleClass="detailOptionBack">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Gender">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <ComboBox focusTraversable="false" layoutX="12.0" layoutY="11.0" prefHeight="41.0" prefWidth="322.0" styleClass="detailOptionCmb" />
+         </children>
+      </Pane>
+      <Pane layoutX="754.0" layoutY="521.0" prefHeight="63.0" prefWidth="324.0" styleClass="detailOptionBack">
+         <children>
+            <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Platoon Code">
+               <padding>
+                  <Insets left="4.0" right="4.0" />
+               </padding>
+            </Label>
+            <TextField layoutX="13.0" layoutY="11.0" prefHeight="41.0" prefWidth="300.0" styleClass="detailTxtField" />
+         </children>
+      </Pane>
+      <JFXButton id="addAchievement" layoutX="930.0" layoutY="594.0" prefHeight="26.0" prefWidth="149.0" text="Add a achievement">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

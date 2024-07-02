@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="MainBackPane" prefHeight="689.0" prefWidth="1156.0" stylesheets="@assets/style/otherPaneFormStyle.css" AnchorPane.rightAnchor="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.platoonPanelFormController">
+    <children>
+        <ImageView fitHeight="76.0" fitWidth="1123.0" layoutX="17.0" pickOnBounds="true" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.0">
+            <image>
+                <Image url="@assets/img/titleBack.jpg" />
+            </image>
+            <effect>
+                <ColorAdjust brightness="0.15" />
+            </effect>
+        </ImageView>
+        <Label id="paneTitleText" layoutX="75.0" layoutY="14.0" prefHeight="49.0" prefWidth="545.0" text="PLATOON MANAGEMENT" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="14.0" />
+        <ScrollPane id="mainScrollPane" focusTraversable="true" maxHeight="-Infinity" prefHeight="1698.0" prefWidth="1123.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="76.0">
+            <content>
+                <AnchorPane id="workingPane" maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" onMouseClicked="#closeOptionsOnClicked" prefHeight="1698.0" prefWidth="1105.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <TextField id="mainSearch" focusTraversable="false" layoutX="75.0" layoutY="30.0" prefHeight="48.0" prefWidth="905.0" promptText="Enter Platoon Code" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="30.0" />
+                        <JFXButton id="showOptions" focusTraversable="false" layoutX="789.0" layoutY="30.0" onMouseClicked="#btnSearchOptionOnClicked" prefHeight="48.0" prefWidth="161.0" text="Search options" AnchorPane.rightAnchor="100.0">
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@assets/img/Slider.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <Pane fx:id="addPlatoonPane" layoutY="107.0" onMouseClicked="#closeOptionsOnClicked" prefHeight="65.0" prefWidth="1105.0" styleClass="OptionBack" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <JFXButton id="btnAddCadet" focusTraversable="false" layoutX="27.0" layoutY="9.0" prefHeight="48.0" prefWidth="172.0" text="Add a Platoon">
+                                    <graphic>
+                                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/Add.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton id="viewAllCadet" focusTraversable="false" layoutX="226.0" layoutY="9.0" prefHeight="48.0" prefWidth="305.0" text="View All Platoons in the Battalion">
+                                    <graphic>
+                                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/allList.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <Label layoutX="726.0" layoutY="23.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Number of Total Platoons : " />
+                                <Label layoutX="940.0" layoutY="24.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="452" />
+                                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="699.0" layoutY="24.0" pickOnBounds="true">
+                                    <image>
+                                        <Image url="@assets/img/Mobilize.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <AnchorPane layoutX="11.0" layoutY="203.0" prefHeight="626.0" prefWidth="1103.0" styleClass="OptionBack" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Pane id="markAllBack" layoutX="10.0" layoutY="531.0" prefHeight="30.0" prefWidth="103.0" AnchorPane.leftAnchor="10.0">
+                                    <children>
+                                        <CheckBox focusTraversable="false" layoutX="16.0" layoutY="6.0" mnemonicParsing="false" text="Mark All" />
+                                    </children>
+                                </Pane>
+                                <TableView focusTraversable="false" layoutX="14.0" layoutY="76.0" onMouseClicked="#closeOptionsOnClicked" prefHeight="500.0" prefWidth="1075.0" stylesheets="@assets/style/tableViewStyle.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+                                    <columns>
+                                        <TableColumn prefWidth="47.0" text="Select" />
+                                        <TableColumn prefWidth="129.99996948242188" text="Platoon Code" />
+                                        <TableColumn prefWidth="84.0" text="Boys/Girls" />
+                                        <TableColumn prefWidth="130.0" text="Type" />
+                                        <TableColumn prefWidth="168.0" text="Category" />
+                                        <TableColumn prefWidth="380.0" text="School" />
+                              <TableColumn prefWidth="135.0" text="Company Code" />
+                                    </columns>
+                                </TableView>
+                                <JFXButton id="btnReport" focusTraversable="false" layoutX="510.0" layoutY="531.0" prefHeight="49.0" prefWidth="179.0" text="Print Report" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="510.0" AnchorPane.rightAnchor="396.0">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/Print.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor></JFXButton>
+                                <JFXButton id="btnViewAndRemove" focusTraversable="false" layoutX="10.0" layoutY="567.0" prefHeight="49.0" prefWidth="270.0" text="View and Edit Details" AnchorPane.bottomAnchor="10.0">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/Edit.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor></JFXButton>
+                                <JFXButton id="btnViewAndRemove" focusTraversable="false" layoutX="300.0" layoutY="567.0" prefHeight="49.0" prefWidth="141.0" text="Remove" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="300.0">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/Remove.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor></JFXButton>
+                                <JFXButton id="btnReport" focusTraversable="false" layoutX="719.0" layoutY="567.0" prefHeight="49.0" prefWidth="182.0" text="View Report" AnchorPane.bottomAnchor="10.0">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/view.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor></JFXButton>
+                                <JFXButton id="btnReport" focusTraversable="false" layoutX="893.0" layoutY="531.0" prefHeight="49.0" prefWidth="182.0" text="Save as PDF" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/PDF.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor></JFXButton>
+                        <Pane id="markAllBack" layoutX="122.0" layoutY="531.0" prefHeight="30.0" prefWidth="319.0">
+                           <children>
+                              <Label layoutX="9.0" layoutY="5.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Search Results : " />
+                              <Label layoutX="141.0" layoutY="5.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="24" />
+                           </children>
+                        </Pane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="11.0" layoutY="861.0" prefHeight="797.0" prefWidth="1105.0" styleClass="OptionBack" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Pane layoutX="29.0" layoutY="81.0" prefHeight="63.0" prefWidth="324.0" styleClass="detailOptionBack" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Platoon Code">
+                                            <padding>
+                                                <Insets left="4.0" right="4.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextField focusTraversable="false" layoutX="12.0" layoutY="13.0" prefHeight="41.0" prefWidth="300.0" styleClass="detailTxtField" />
+                                    </children>
+                                </Pane>
+                                <Pane layoutX="364.0" layoutY="25.0" prefHeight="63.0" prefWidth="206.0" styleClass="detailOptionBack" AnchorPane.topAnchor="25.0">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Boys/Girls">
+                                            <padding>
+                                                <Insets left="4.0" right="4.0" />
+                                            </padding>
+                                        </Label>
+                                        <ComboBox focusTraversable="false" layoutX="12.0" layoutY="11.0" prefHeight="41.0" prefWidth="181.0" styleClass="detailOptionCmb" />
+                                    </children>
+                                </Pane>
+                                <Pane layoutX="590.0" layoutY="25.0" prefHeight="63.0" prefWidth="146.0" styleClass="detailOptionBack">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Number of Cadets">
+                                            <padding>
+                                                <Insets left="4.0" right="4.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextField focusTraversable="false" layoutX="12.0" layoutY="12.0" prefHeight="41.0" prefWidth="123.0" styleClass="detailTxtField" />
+                                    </children>
+                                </Pane>
+                                <Pane layoutX="653.0" layoutY="104.0" prefHeight="63.0" prefWidth="428.0" styleClass="detailOptionBack">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Platoon Captain">
+                                            <padding>
+                                                <Insets left="4.0" right="4.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextField focusTraversable="false" layoutX="12.0" layoutY="12.0" prefHeight="41.0" prefWidth="405.0" styleClass="detailTxtField" />
+                                    </children>
+                                </Pane>
+                                <Pane layoutX="27.0" layoutY="181.0" prefHeight="63.0" prefWidth="1055.0" styleClass="detailOptionBack">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="School">
+                                            <padding>
+                                                <Insets left="4.0" right="4.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextField focusTraversable="false" layoutX="12.0" layoutY="12.0" prefHeight="41.0" prefWidth="1032.0" styleClass="detailTxtField" />
+                                    </children>
+                                </Pane>
+                                <JFXButton id="btnViewAndRemove" focusTraversable="false" layoutX="27.0" layoutY="732.0" prefHeight="49.0" prefWidth="141.0" text="Remove" AnchorPane.leftAnchor="27.0">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/Remove.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton id="btnReport" focusTraversable="false" layoutX="512.0" layoutY="731.0" prefHeight="49.0" prefWidth="179.0" text="Print Report">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/Print.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton id="btnReport" focusTraversable="false" layoutX="706.0" layoutY="731.0" prefHeight="49.0" prefWidth="182.0" text="View Report">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/view.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton id="btnReport" focusTraversable="false" layoutX="898.0" layoutY="731.0" prefHeight="49.0" prefWidth="182.0" text="Save as PDF">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/PDF.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton id="btnViewAndRemove" focusTraversable="false" layoutX="190.0" layoutY="732.0" prefHeight="49.0" prefWidth="161.0" text="Save Changes" visible="false">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/Save.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton id="btnViewAndRemove" focusTraversable="false" layoutX="190.0" layoutY="732.0" prefHeight="49.0" prefWidth="161.0" text="Edit Details">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/Edit.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                        <Pane layoutX="756.0" layoutY="23.0" prefHeight="63.0" prefWidth="324.0" styleClass="detailOptionBack" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Platoon Type">
+                                 <padding>
+                                    <Insets left="4.0" right="4.0" />
+                                 </padding>
+                              </Label>
+                              <ComboBox focusTraversable="false" layoutX="12.0" layoutY="11.0" prefHeight="41.0" prefWidth="300.0" styleClass="detailOptionCmb" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="25.0" layoutY="103.0" prefHeight="63.0" prefWidth="273.0" styleClass="detailOptionBack">
+                           <children>
+                              <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Platoon Category">
+                                 <padding>
+                                    <Insets left="4.0" right="4.0" />
+                                 </padding>
+                              </Label>
+                              <ComboBox focusTraversable="false" layoutX="12.0" layoutY="11.0" prefHeight="41.0" prefWidth="249.0" styleClass="detailOptionCmb" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="323.0" layoutY="104.0" prefHeight="63.0" prefWidth="298.0" styleClass="detailOptionBack">
+                           <children>
+                              <Label layoutX="14.0" layoutY="-9.0" styleClass="searchOptionTitle" text="Company Code">
+                                 <padding>
+                                    <Insets left="4.0" right="4.0" />
+                                 </padding>
+                              </Label>
+                              <ComboBox focusTraversable="false" layoutX="12.0" layoutY="11.0" prefHeight="41.0" prefWidth="275.0" styleClass="detailOptionCmb" />
+                           </children>
+                        </Pane>
+                        <TableView focusTraversable="false" layoutX="25.0" layoutY="280.0" onMouseClicked="#closeOptionsOnClicked" prefHeight="205.0" prefWidth="1057.0" stylesheets="@assets/style/tableViewStyle.css">
+                           <columns>
+                              <TableColumn prefWidth="907.0000076293945" text="Achievement" />
+                              <TableColumn prefWidth="149.0" text="Options" />
+                           </columns>
+                        </TableView>
+                        <JFXButton id="addAchievement" layoutX="933.0" layoutY="250.0" prefHeight="26.0" prefWidth="149.0" text="Add a achievement">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <TableView focusTraversable="false" layoutX="26.0" layoutY="505.0" onMouseClicked="#closeOptionsOnClicked" prefHeight="205.0" prefWidth="1057.0" stylesheets="@assets/style/tableViewStyle.css">
+                           <columns>
+                              <TableColumn prefWidth="1055.9999885559082" text="Camping Details" />
+                           </columns>
+                        </TableView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane id="searchOptionPane" fx:id="searchOptionPane" layoutX="100.0" layoutY="79.0" prefHeight="459.0" prefWidth="905.0">
+                            <children>
+                                <JFXTextField focusTraversable="false" labelFloat="true" layoutX="24.0" layoutY="50.0" prefHeight="23.0" prefWidth="400.0" promptText="Company Code" style="-fx-font-size: 16;" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="50.0" />
+                                <Label focusTraversable="false" layoutX="53.0" layoutY="19.0" style="-fx-text-fill: #919191; -fx-font-size: 13;" text="Select/Enter one or more Option" AnchorPane.leftAnchor="53.0" />
+                                <JFXComboBox focusTraversable="false" layoutX="481.0" layoutY="127.0" prefHeight="23.0" prefWidth="400.0" promptText="Category" style="-fx-font-size: 16;" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="110.0" />
+                                <JFXComboBox focusTraversable="false" layoutX="24.0" layoutY="136.0" prefHeight="23.0" prefWidth="400.0" promptText="Boys / Girls" style="-fx-font-size: 16;" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="50.0" />
+                                <JFXComboBox focusTraversable="false" layoutX="34.0" layoutY="60.0" prefHeight="23.0" prefWidth="400.0" promptText="Type" style="-fx-font-size: 16;" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="110.0" />
+                                <JFXTextField focusTraversable="false" labelFloat="true" layoutX="24.0" layoutY="202.0" prefHeight="23.0" prefWidth="400.0" promptText="Zone" style="-fx-font-size: 16;" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="173.0" />
+                                <JFXTextField focusTraversable="false" labelFloat="true" layoutX="24.0" layoutY="240.0" prefHeight="32.0" prefWidth="858.0" promptText="Achievement" style="-fx-font-size: 16;" AnchorPane.leftAnchor="24.0" />
+                                <JFXTextField focusTraversable="false" labelFloat="true" layoutX="24.0" layoutY="308.0" prefHeight="23.0" prefWidth="400.0" promptText="School" style="-fx-font-size: 16;" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" />
+                                <JFXButton id="btnSearch" focusTraversable="false" layoutX="735.0" layoutY="387.0" prefHeight="41.0" prefWidth="146.0" text="Search" AnchorPane.bottomAnchor="31.0">
+                                    <graphic>
+                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/Search.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton id="btnClearSearch" focusTraversable="false" layoutX="544.0" layoutY="387.0" prefHeight="41.0" prefWidth="156.0" text="Clear Search" AnchorPane.bottomAnchor="31.0">
+                                    <graphic>
+                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/img/ClearSearch.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </JFXButton>
+                                <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="24.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="24.0">
+                                    <image>
+                                        <Image url="@assets/img/Info.png" />
+                                    </image>
+                                </ImageView>
+                        <JFXTextField focusTraversable="false" labelFloat="true" layoutX="481.0" layoutY="174.0" prefHeight="23.0" prefWidth="400.0" promptText="Number of Cadets" style="-fx-font-size: 16;" />
+                            </children>
+                        </AnchorPane>
+                    </children></AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

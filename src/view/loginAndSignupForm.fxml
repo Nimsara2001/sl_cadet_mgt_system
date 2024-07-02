@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane fx:id="loginFormRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="1024.5" stylesheets="@assets/style/loginFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.loginAndSignupFormController">
+   <left>
+      <ImageView fitHeight="576.0" fitWidth="639.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@assets/img/back.png" />
+         </image>
+      </ImageView>
+   </left>
+   <top>
+      <AnchorPane id="closePane" onMouseDragged="#closePaneOnMouseDragged" onMousePressed="#closePaneOnMousePressed" prefHeight="42.0" prefWidth="1025.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView id="closeMiniIcon" fitHeight="25.0" fitWidth="25.0" layoutX="991.0" layoutY="8.0" onMouseClicked="#closeOnClicked" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/img/Close.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView id="closeMiniIcon" fitHeight="25.0" fitWidth="25.0" layoutX="955.0" layoutY="8.0" onMouseClicked="#minimizeOnClicked" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/img/Minimize.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="MOVE" />
+         </cursor>
+      </AnchorPane>
+   </top>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="loginPane" prefHeight="576.0" prefWidth="385.5" stylesheets="@assets/style/loginFormStyle.css">
+               <children>
+                  <ImageView fitHeight="576.0" fitWidth="386.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@assets/img/loginPaneBack.png" />
+                     </image>
+                  </ImageView>
+                  <TextField layoutX="73.0" layoutY="188.0" prefHeight="45.0" prefWidth="290.0" promptText="Enter User Name" />
+                  <PasswordField layoutX="73.0" layoutY="263.0" prefHeight="45.0" prefWidth="290.0" promptText="Enter Password" />
+                  <Pane layoutX="24.0" layoutY="188.0" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #fff04d; -fx-border-color: #FEC300;">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/UserMale.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="24.0" layoutY="263.0" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #fff04d; -fx-border-color: #FEC300;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="9.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/Key.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <JFXButton id="btnCancel" focusTraversable="false" layoutX="24.0" layoutY="341.0" prefHeight="40.0" prefWidth="105.0" text="Cancel">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton focusTraversable="false" layoutX="258.0" layoutY="341.0" onMouseClicked="#btnLogInOnClicked" prefHeight="40.0" prefWidth="105.0" text="Log In">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton id="btnCreateAccount" focusTraversable="false" layoutX="24.0" layoutY="381.0" onMouseClicked="#createAccountOnClicked" prefHeight="37.0" prefWidth="339.0" text="Create Account" AnchorPane.bottomAnchor="44.0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/Up.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="signupPane" prefHeight="576.0" prefWidth="385.5" stylesheets="@assets/style/loginFormStyle.css">
+               <children>
+                  <ImageView fitHeight="576.0" fitWidth="386.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@assets/img/loginPaneBack.png" />
+                     </image>
+                  </ImageView>
+                  <TextField layoutX="73.0" layoutY="148.0" prefHeight="45.0" prefWidth="290.0" promptText="Enter New User Name" />
+                  <PasswordField layoutX="73.0" layoutY="223.0" prefHeight="45.0" prefWidth="290.0" promptText="Enter New Password" />
+                  <Pane layoutX="24.0" layoutY="148.0" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #fff04d; -fx-border-color: #FEC300;">
+                     <children>
+                        <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/UserMale.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="24.0" layoutY="223.0" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #fff04d; -fx-border-color: #FEC300;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="9.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/AddKey.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label focusTraversable="false" layoutX="24.0" layoutY="33.0" prefHeight="31.0" prefWidth="339.0" style="-fx-border-color: #FEC300; -fx-font-size: 15; -fx-background-color: rgba(255, 244, 128, 0.31);" text="                Create a new User Account" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="23.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <JFXButton id="btnCancel" focusTraversable="false" layoutX="24.0" layoutY="386.0" prefHeight="40.0" prefWidth="105.0" text="Cancel">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton focusTraversable="false" layoutX="258.0" layoutY="386.0" prefHeight="40.0" prefWidth="105.0" text="Create">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <PasswordField layoutX="73.0" layoutY="298.0" prefHeight="45.0" prefWidth="290.0" promptText="Confirm Password" />
+                  <Pane layoutX="24.0" layoutY="298.0" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #fff04d; -fx-border-color: #FEC300;">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="9.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/Key.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <JFXButton focusTraversable="false" layoutX="24.0" layoutY="493.0" onMouseClicked="#backToLogInClicked" prefHeight="37.0" prefWidth="339.0" text="Open Log In Page">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/Down.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

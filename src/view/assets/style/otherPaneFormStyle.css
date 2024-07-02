@@ -1,0 +1,209 @@
+*{
+    -fx-font-family: Inter;
+}
+#MainBackPane{
+    -fx-background-color: rgba(16, 24, 32, 0.8);
+}
+#mainScrollPane{
+    -fx-background-insets: 0px;
+}
+#paneTitleText{
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+    -fx-font-size: 35;
+}
+
+#workingPane{
+    -fx-background-image: url("dashboardPaneBack.jpg");
+
+}
+#mainSearch{
+    -fx-background-color:WHITE;
+    -fx-border-color: rgba(16, 24, 32, 0.52);
+    -fx-border-width: 0.5;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-font-size: 15;
+}
+
+#mainSearch:focused{
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 2, 0.0 , 0 , 0.4 );
+}
+#showOptions{
+    -fx-border-color:  rgba(16, 24, 32, 0.52);
+    -fx-border-width: 0 0 0 0.5 ;
+    -fx-background-radius: 0;
+    -fx-font-size: 14 ;
+}
+#showOptions:hover{
+    -fx-background-color: rgba(27, 37, 52, 0.9);
+    -fx-text-fill:#FEC300;
+}
+#btnAddCadet{
+    -fx-background-color: #ffdb72;
+    -fx-border-color: #FEC300;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0.5;
+    -fx-font-size:15;
+}
+#btnAddCadet:hover{
+    -fx-background-color:rgba(32, 43, 63, 0.9);
+    -fx-text-fill:#FEC300;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 5, 0.0 , 0 , 1 );
+    -fx-font-size: 16;
+}
+#viewAllCadet{
+    -fx-background-color: rgba(255, 244, 128, 0.31);
+    -fx-border-color: #FEC300;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0.5;
+    -fx-font-size:15;
+
+}
+#viewAllCadet:hover{
+    -fx-background-color: rgba(27, 37, 52, 0.9);
+    -fx-text-fill:#FEC300;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 5, 0.0 , 0 , 1 );
+    -fx-font-size: 16;
+}
+
+#btnViewAndRemove{
+    -fx-background-color: rgba(255, 244, 128, 0.31);
+    -fx-border-color: #FEC300;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0.5;
+    -fx-font-size:15;
+}
+
+#btnViewAndRemove:hover{
+    -fx-background-color: rgba(32, 43, 63, 0.9);
+    -fx-text-fill:#FEC300;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 5, 0.0 , 0 , 1 );
+    -fx-font-size: 16;
+}
+#btnReport{
+    -fx-background-color: rgba(255, 219, 114, 0.6);
+    -fx-border-color: #FEC300;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0.5;
+    -fx-font-size:12;
+}
+#btnReport:hover{
+    -fx-background-color: rgba(32, 43, 63, 0.9);
+    -fx-text-fill:#FEC300;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 5, 0.0 , 0 , 1 );
+}
+.OptionBack{
+    -fx-background-color: rgba(43, 63, 85, 0.19);
+}
+#markAllBack{
+    -fx-background-color: rgba(199, 199, 199, 0.85);
+    -fx-background-radius:0;
+    -fx-border-radius: 0;
+    -fx-border-color: rgba(0, 0, 0, 0.34);
+    -fx-border-width: 0.5;
+}
+#btnSearch{
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 2, 0.0 , 0 , 0.4 );
+    -fx-background-color: rgba(32, 43, 63, 0.9);
+    -fx-text-fill:#FEC300;
+    -fx-background-radius: 10;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+#btnSearch:hover{
+    -fx-background-color: rgba(255, 200, 70, 0.8);
+    -fx-text-fill:rgba(32, 43, 63, 0.9) ;
+    -fx-font-size: 16;
+}
+#btnClearSearch{
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 2, 0.0 , 0 , 0.4 );
+    -fx-background-color: rgba(232, 232, 232, 0.14);
+    -fx-text-fill: rgba(27, 37, 52, 0.9);
+    -fx-background-radius: 10;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+#btnClearSearch:hover{
+    -fx-background-color: rgba(255, 200, 70, 0.8);
+    -fx-text-fill:rgba(32, 43, 63, 0.9) ;
+}
+.detailTxtField{
+   -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-width: 0.3;
+    -fx-font-size: 16;
+}
+.detailOptionBack{
+    -fx-border-width: 0.4;
+    -fx-border-color: #FEC300;
+}
+.searchOptionTitle{
+    -fx-background-color: #F4D885;
+    -fx-background-radius:4;
+}
+.detailOptionCmb{
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 0;
+    -fx-border-color: #FEC300;
+    -fx-font-size: 15;
+    -fx-background-insets: 0px;
+}
+
+.jfx-date-picker .jfx-text-field{
+    -jfx-unfocus-color: transparent;
+    -jfx-focus-color: transparent;
+}
+.jfxDatePicker .jfx-text-field{
+    -jfx-unfocus-color: black;
+    -jfx-focus-color: blue;
+}
+#imageBack{
+    -fx-background-color:#F4D885 ;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 2, 0.0 , 0 , 0.4 );
+}
+#searchOptionPane{
+    -fx-background-radius: 14 0 14 14;
+    -fx-background-color: white ;
+    -fx-effect: dropshadow( three-pass-box ,#0000006a , 2, 0.0 , 0 , 0.4 ) ;
+    -fx-opacity: 1 ;
+}
+#imageEdit{
+    -fx-background-color: rgba(255, 180, 0, 0.68);
+    -fx-background-radius: 0;
+}
+#imageEdit:hover{
+    -fx-background-color:  #101820FF;
+    -fx-text-fill: #F4D885;
+}
+#addAchievement{
+    -fx-background-color:#F0EEB3;
+    -fx-background-radius: 0;
+    -fx-text-fill: #5C1B05 ;
+}
+#addAchievement:hover {
+    -fx-text-fill: #F0EEB3;
+    -fx-background-color: #5C1B05;
+}
+#closeMiniIcon:hover{
+    -fx-effect:  dropshadow( three-pass-box , rgba(122, 122, 122, 0.6), 5, 0.3, 2 , 2 );
+    -fx-opacity: 1;
+}
+.jfx-text-field{
+    -fx-prompt-text-fill: #8f8d8d;
+}
+.jfx-combo-box{
+    -fx-prompt-text-fill: #8f8d8d;
+}
+#totalCompany{
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+.chart-legend{
+    -fx-background-color: rgba(220, 220, 220, 0.41);
+}

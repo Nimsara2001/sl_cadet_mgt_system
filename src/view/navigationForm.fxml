@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.navigationFormController">
+   <children>
+      <BorderPane prefHeight="730.0" prefWidth="1366.0" stylesheets="@assets/style/navigationFormStyle.css">
+         <center>
+            <StackPane fx:id="rootPanel" prefHeight="689.0" prefWidth="1156.0" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <Pane id="titleBar" onMouseDragged="#closePaneOnMouseDragged" onMousePressed="#closePaneOnMousePressed" prefHeight="41.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor>
+               <children>
+                  <ImageView id="closeMiniIcon" fitHeight="25.0" fitWidth="25.0" layoutX="1333.0" layoutY="8.0" onMouseClicked="#closeOnClicked" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/img/Close.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView id="closeMiniIcon" fitHeight="25.0" fitWidth="25.0" layoutX="1297.0" layoutY="8.0" onMouseClicked="#minimizeOnClicked" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/img/Minimize.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+         </top>
+         <left>
+            <VBox id="vBox" prefHeight="689.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnDashboard" focusTraversable="false" layoutX="10.0" layoutY="92.0" onMouseClicked="#btnDashboardOnClicked" prefHeight="67.0" prefWidth="210.0" styleClass="navigateBtn" text="   Dashboard">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-19.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPlatoon" focusTraversable="false" layoutX="10.0" layoutY="174.0" onMouseClicked="#btnPlatoonOnClicked" prefHeight="67.0" prefWidth="210.0" styleClass="navigateBtn" text="   Platoons">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/platoon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-40.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCompanies" focusTraversable="false" layoutX="10.0" layoutY="538.0" onMouseClicked="#btnCompaniesOnClicked" prefHeight="67.0" prefWidth="210.0" styleClass="navigateBtn" text="   Companies">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/companies.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="-15.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSchool" focusTraversable="false" layoutX="10.0" layoutY="256.0" onMouseClicked="#btnSchoolOnClicked" prefHeight="67.0" prefWidth="210.0" styleClass="navigateBtn" text="   Schools">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/school.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-41.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCadet" focusTraversable="false" layoutX="10.0" layoutY="10.0" onMouseClicked="#btnCadetOnClicked" prefHeight="67.0" prefWidth="210.0" styleClass="navigateBtn" text="   Cadets">
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/cadet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-39.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnOfficer" focusTraversable="false" onMouseClicked="#btnOfficerOnClicked" prefHeight="67.0" prefWidth="210.0" styleClass="navigateBtn" text="   Officers">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/officer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-37.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnZone" focusTraversable="false" layoutX="10.0" layoutY="338.0" onMouseClicked="#btnZoneOnClicked" prefHeight="67.0" prefWidth="210.0" styleClass="navigateBtn" text="   Zones">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/zone.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-43.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCamping" focusTraversable="false" layoutX="10.0" layoutY="420.0" onMouseClicked="#btnCampingOnClicked" prefHeight="67.0" prefWidth="210.0" styleClass="navigateBtn" text="   Camping">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/camping.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="-31.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCashReport" focusTraversable="false" layoutX="10.0" layoutY="502.0" onMouseClicked="#btnCashReportOnClicked" prefHeight="67.0" prefWidth="210.0" styleClass="navigateBtn" text="   Cash Reports">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/cashReport.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="1.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Separator opacity="0.4" prefWidth="200.0" />
+                  <JFXButton id="helpCloseBtn" fx:id="btnSetting" focusTraversable="false" onMouseClicked="#btnSettingOnClicked" prefHeight="40.5" prefWidth="210.0" text="   Settings">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/setting.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="-37.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton id="helpCloseBtn" fx:id="btnSupport" focusTraversable="false" layoutX="10.0" layoutY="618.0" onMouseClicked="#btnSupportOnClicked" prefHeight="40.5" prefWidth="210.0" text="   Support">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/img/help.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="-39.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</StackPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="MainBackPane" prefHeight="689.0" prefWidth="1156.0" stylesheets="@assets/style/otherPaneFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.supportPanelFormController">
+   <children>
+      <ImageView fitHeight="76.0" fitWidth="1120.0" layoutX="18.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/img/titleBack.jpg" />
+         </image>
+      </ImageView>
+      <Label id="paneTitleText" layoutX="41.0" layoutY="14.0" style="-fx-text-fill: #808080;" text="SYSTEM SUPPORT" AnchorPane.leftAnchor="75.0" />
+   </children>
+</AnchorPane>
